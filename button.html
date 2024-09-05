@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Button Styles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Neumorphic Button */
+        .neumorphic-button {
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            box-shadow: 8px 8px 15px #b8b8b8, -8px -8px 15px #ffffff;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .neumorphic-button:active {
+            box-shadow: inset 4px 4px 8px #b8b8b8, inset -4px -4px 8px #ffffff;
+        }
+
+        /* Glassmorphic Button */
+        .glassmorphic-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: #333;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            font-size: 16px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .glassmorphic-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: #000;
+        }
+
+        /* Pulse Button */
+        .pulse-button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .pulse-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        .pulse-button:hover::before {
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+
+        .pulse-button:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Shadow Button */
+        .shadow-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .shadow-button:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Textured Button */
+        .textured-button {
+            background: url('https://via.placeholder.com/200x50') repeat;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .textured-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: 0;
+        }
+
+        .textured-button:hover::after {
+            width: 0;
+            height: 0;
+        }
+
+        .textured-button:hover {
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Rotating Button */
+        .rotating-button {
+            background-color: #9b59b6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .rotating-button:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Button Styles</h1>
+    <div class="button-container">
+        <button class="neumorphic-button">Neumorphic</button>
+        <button class="glassmorphic-button">Glassmorphic</button>
+        <button class="pulse-button">Pulse</button>
+        <button class="shadow-button">Shadow</button>
+        <button class="textured-button">Textured</button>
+        <button class="rotating-button">Rotate</button>
+    </div>
+</body>
+</html>

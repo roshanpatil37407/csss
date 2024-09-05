@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Styling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Styling for images */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-container div {
+            text-align: center;
+            width: 300px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Image Styles */
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .bordered {
+            border: 5px solid #333;
+        }
+
+        .shadowed {
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blurred {
+            filter: blur(3px);
+        }
+
+        .hover-blur:hover {
+            filter: blur(0);
+            transition: filter 0.3s ease;
+        }
+
+        .rotate:hover {
+            transform: rotate(20deg);
+            transition: transform 0.3s ease;
+        }
+
+        .opacity {
+            opacity: 0.6;
+        }
+
+        .opacity:hover {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Styling for Images</h1>
+    <div class="image-container">
+        <!-- Basic image -->
+        <div>
+            <h3>Original Image</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Original Image">
+        </div>
+
+        <!-- Rounded image -->
+        <div>
+            <h3>Rounded Image</h3>
+            <img class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Rounded Image">
+        </div>
+
+        <!-- Bordered image -->
+        <div>
+            <h3>Bordered Image</h3>
+            <img class="bordered" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Bordered Image">
+        </div>
+
+        <!-- Shadowed image -->
+        <div>
+            <h3>Shadowed Image</h3>
+            <img class="shadowed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Shadowed Image">
+        </div>
+
+        <!-- Grayscale image -->
+        <div>
+            <h3>Grayscale Image</h3>
+            <img class="grayscale" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Grayscale Image">
+        </div>
+
+        <!-- Hover Zoom Effect -->
+        <div>
+            <h3>Hover Zoom Image</h3>
+            <img class="hover-zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Hover Zoom Image">
+        </div>
+
+        <!-- Blurred Image -->
+        <div>
+            <h3>Blurred Image</h3>
+            <img class="blurred" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Blurred Image">
+        </div>
+
+        <!-- Hover to remove blur -->
+        <div>
+            <h3>Hover to Remove Blur</h3>
+            <img class="hover-blur blurred" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Hover Blur Image">
+        </div>
+
+        <!-- Rotate on hover -->
+        <div>
+            <h3>Rotate on Hover</h3>
+            <img class="rotate" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Rotate Image">
+        </div>
+
+        <!-- Opacity Image -->
+        <div>
+            <h3>Opacity Image</h3>
+            <img class="opacity" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszZywpjYZMjnmWr_To6dbqFGyg123av4jow&s" alt="Opacity Image">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout - Header, Main, Menu, Footer</title>
+    <style>
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu main main"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr; /* 2 columns: 200px menu, remaining for main content */
+            grid-template-rows: auto 1fr auto; /* Rows: automatic height for header/footer, flexible content */
+            height: 100vh; /* Full viewport height */
+            gap: 10px; /* Gap between items */
+            padding: 10px;
+        }
+
+        /* Individual Grid Items */
+        .header {
+            grid-area: header;
+            background-color: lightcoral;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu {
+            grid-area: menu;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: lightsalmon;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Optional Styling for text */
+        .header, .menu, .main, .footer {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "menu"
+                    "footer";
+                grid-template-columns: 1fr; /* Single column layout on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main Content</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

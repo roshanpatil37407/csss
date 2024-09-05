@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2D Transforms</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            margin: 20px;
+            transition: transform 0.5s;
+        }
+
+        .translate-x {
+            transform: translateX(50px);
+        }
+
+        .translate-y {
+            transform: translateY(50px);
+        }
+
+        .scale-x {
+            transform: scaleX(1.5);
+        }
+
+        .scale-y {
+            transform: scaleY(1.5);
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+
+        .skew-x {
+            transform: skewX(20deg);
+        }
+
+        .skew-y {
+            transform: skewY(20deg);
+        }
+
+        .combined {
+            transform: translateX(50px) rotate(30deg) scaleY(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate-x">Translate X</div>
+        <div class="box translate-y">Translate Y</div>
+        <div class="box scale-x">Scale X</div>
+        <div class="box scale-y">Scale Y</div>
+        <div class="box rotate">Rotate</div>
+        <div class="box skew-x">Skew X</div>
+        <div class="box skew-y">Skew Y</div>
+        <div class="box combined">Combined</div>
+    </div>
+</body>
+</html>

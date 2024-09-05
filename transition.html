@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            transition: all 0.5s ease; /* Transition for all properties */
+            margin: 20px;
+        }
+
+        .box:hover {
+            width: 150px;
+            height: 150px;
+            background: #e74c3c;
+            transform: rotate(45deg);
+            opacity: 0.5;
+        }
+
+        /* Specific property transitions */
+        .color-transition {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            transition: background 0.5s ease; /* Only the background color transitions */
+            margin: 20px;
+        }
+
+        .color-transition:hover {
+            background: #e74c3c;
+        }
+
+        .size-transition {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            transition: width 0.5s ease, height 0.5s ease; /* Separate transitions for width and height */
+            margin: 20px;
+        }
+
+        .size-transition:hover {
+            width: 150px;
+            height: 150px;
+        }
+
+        .transform-transition {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            transition: transform 0.5s ease; /* Only the transform property transitions */
+            margin: 20px;
+        }
+
+        .transform-transition:hover {
+            transform: rotate(45deg) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hover me</div>
+    <div class="color-transition">Hover me</div>
+    <div class="size-transition">Hover me</div>
+    <div class="transform-transition">Hover me</div>
+</body>
+</html>

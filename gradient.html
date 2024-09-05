@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients</title>
+    <style>
+        .linear-gradient {
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .linear-direction {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+
+        .linear-color-stops {
+            background: linear-gradient(to right, red 20%, yellow 80%);
+        }
+
+        .linear-repeating {
+            background: repeating-linear-gradient(45deg, red, yellow 10%, blue 20%, green 30%);
+        }
+
+        .linear-transparency {
+            background: linear-gradient(to right, rgba(255,0,0,0.5), rgba(0,0,255,0.5));
+        }
+
+        .radial-gradient {
+            height: 200px;
+        }
+
+        .radial-shape {
+            background: radial-gradient(circle, red, blue);
+        }
+
+        .radial-size {
+            background: radial-gradient(circle closest-corner, red, blue);
+        }
+
+        .radial-position {
+            background: radial-gradient(circle, rgb(219, 131, 204), rgb(94, 241, 36) 10%, rgb(76, 176, 226));
+        }
+
+        .radial-repeating {
+            background: repeating-radial-gradient(circle, red, rgb(94, 241, 36) 10%, green 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="linear-gradient linear-direction">Linear Gradient Direction</div>
+    <div class="linear-gradient linear-color-stops">Linear Gradient Color Stops</div>
+    <div class="linear-gradient linear-repeating">Repeating Linear Gradient</div>
+    <div class="linear-gradient linear-transparency">Linear Gradient with Transparency</div>
+    
+    <div class="radial-gradient radial-shape">Radial Gradient Shape</div><br>
+    <div class="radial-gradient radial-size">Radial Gradient Size</div><br>
+    <div class="radial-gradient radial-position">Radial Gradient Position</div><br>
+    <div class="radial-gradient radial-repeating">Repeating Radial Gradient</div>
+</body>
+</html>

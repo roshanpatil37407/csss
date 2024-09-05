@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effects</title>
+    <style>
+        /* Text Gradient */
+        .text-gradient {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6f61, #d4a5a5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        /* Text Shadow */
+        .text-shadow {
+            font-size: 3em;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+
+        /* Text Outline */
+        .text-outline {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 
+                         1px -1px 0 #000,
+                         -1px 1px 0 #000,
+                         1px 1px 0 #000; /* Outline effect */
+            margin-bottom: 20px;
+        }
+
+        .text-outline-modern {
+            font-size: 3em;
+            color: #fff;
+            -webkit-text-stroke: 1px #000; /* Modern outline effect */
+            margin-bottom: 20px;
+        }
+
+        /* Text Glow */
+        .text-glow {
+            font-size: 3em;
+            color: #0f0;
+            text-shadow: 0 0 10px rgba(0,255,0,0.8), 0 0 20px rgba(0,255,0,0.6);
+            margin-bottom: 20px;
+        }
+
+        /* Text Underline Effect */
+        .text-underline {
+            font-size: 2em;
+            color: #333;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .text-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6f61;
+            transition: width 0.3s;
+        }
+
+        .text-underline:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-gradient">Text with Gradient</div>
+    <div class="text-shadow">Text with Shadow</div>
+    <div class="text-outline">Text with Outline</div>
+    <div class="text-outline-modern">Text with Modern Outline</div>
+    <div class="text-glow">Text with Glow</div>
+    <div class="text-underline">Text with Underline Effect</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .box {
+            background-color: #009688;
+            color: white;
+            padding: 20px;
+            border: 5px solid #004d40;
+            margin: 20px;
+        }
+        .container {
+            margin: 0 auto;
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .box-content {
+            background-color: #00796b;
+            padding: 10px;
+            border: 3px solid #004d40;
+        }
+        .box-padding {
+            padding: 30px;
+            border: 3px solid #004d40;
+            margin: 10px;
+        }
+        .box-border {
+            border: 10px solid #004d40;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box-margin {
+            margin: 40px;
+            padding: 10px;
+            border: 2px solid #004d40;
+        }
+        .box-box-sizing {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 10px solid #004d40;
+            margin: 10px;
+            width: 200px;
+            background-color: #004d40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Box Model Properties</h1>
+        
+        <div class="box">
+            <h2>Basic Box</h2>
+            <p>This box shows the default box model. Padding, border, and margin are applied around the content.</p>
+        </div>
+
+        <div class="box box-content">
+            <h2>Content Area</h2>
+            <p>The content area is padded with a background color and a border.</p>
+        </div>
+
+        <div class="box box-padding">
+            <h2>Padding</h2>
+            <p>This box has extra space around its content due to padding.</p>
+        </div>
+
+        <div class="box box-border">
+            <h2>Border</h2>
+            <p>This box has a border around it. The border thickness affects the total size of the box.</p>
+        </div>
+
+        <div class="box box-margin">
+            <h2>Margin</h2>
+            <p>This box has extra space outside its border due to margin.</p>
+        </div>
+
+        <div class="box box-box-sizing">
+            <h2>Box-Sizing</h2>
+            <p>This box uses <code>box-sizing: border-box;</code>, so padding and border are included in the total width and height.</p>
+        </div>
+    </div>
+</body>
+</html>

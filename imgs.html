@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Example</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Responsive Image Using <code>picture</code> and <code>srcset</code></h1>
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="https://via.placeholder.com/600x400">
+            <source media="(max-width: 1200px)" srcset="https://via.placeholder.com/1200x800">
+            <img src="https://via.placeholder.com/1800x1200" alt="Sample Responsive Image">
+        </picture>
+
+    </div>
+
+</body>
+</html>

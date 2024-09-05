@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .box {
+            width: 30%;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            margin: 10px;
+        }
+
+        /* Media query for devices with a width of 768px or smaller */
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack the boxes vertically */
+                align-items: center;
+            }
+
+            .box {
+                width: 80%; /* Make the boxes wider for smaller screens */
+            }
+        }
+
+        /* Media query for devices with a width of 480px or smaller */
+        @media only screen and (max-width: 480px) {
+            .box {
+                width: 100%; /* Make the boxes full-width on mobile */
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Web Design Example</h1>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+</html>

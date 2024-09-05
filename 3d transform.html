@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Transforms</title>
+    <style>
+        body {
+            margin: 20px;
+            perspective: 1000px; /* Adds perspective to the entire scene */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            margin: 20px;
+            transition: transform 0.5s;
+        }
+
+        .rotate-x {
+            transform: rotateX(45deg);
+        }
+
+        .rotate-y {
+            transform: rotateY(45deg);
+        }
+
+        .rotate-z {
+            transform: rotateZ(45deg);
+        }
+
+        .translate-x {
+            transform: translateX(50px);
+        }
+
+        .translate-y {
+            transform: translateY(50px);
+        }
+
+        .translate-z {
+            transform: translateZ(50px);
+        }
+
+        .combined {
+            transform: rotateY(30deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box rotate-x">Rotate X</div>
+        <div class="box rotate-y">Rotate Y</div>
+        <div class="box rotate-z">Rotate Z</div>
+        <div class="box translate-x">Translate X</div>
+        <div class="box translate-y">Translate Y</div>
+        <div class="box translate-z">Translate Z</div>
+        <div class="box combined">Rotate Y & Translate Z</div>
+    </div>
+</body>
+</html>

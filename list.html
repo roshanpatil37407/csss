@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS List Styling Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+
+        /* Basic List Styling */
+        .basic-list {
+            list-style-type: disc; /* Default bullet style */
+            padding-left: 20px;
+        }
+
+        /* Custom Bullet List */
+        .custom-bullet-list {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 20px;
+        }
+        .custom-bullet-list li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px; /* Space for custom bullet */
+        }
+        .custom-bullet-list li::before {
+            content: '✔'; /* Custom bullet character */
+            color: #009688;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+
+        /* Numbered List with Background */
+        .numbered-list {
+            counter-reset: item; /* Reset the counter */
+            list-style-type: none; /* Remove default numbers */
+            padding-left: 0;
+        }
+        .numbered-list li {
+            counter-increment: item; /* Increment counter */
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #009688;
+            color: white;
+            border-radius: 5px;
+            position: relative;
+        }
+        .numbered-list li::before {
+            content: counter(item) "."; /* Add custom counter */
+            position: absolute;
+            left: -30px;
+            font-weight: bold;
+        }
+
+        /* Horizontal List */
+        .horizontal-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 15px; /* Space between list items */
+        }
+        .horizontal-list li {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .horizontal-list li:hover {
+            background-color: #e64a19; /* Darker on hover */
+        }
+
+        /* List with Icons */
+        .icon-list {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 20px;
+        }
+        .icon-list li {
+            margin-bottom: 10px;
+        }
+        .icon-list li i {
+            color: #ff9800;
+            margin-right: 10px; /* Space between icon and text */
+        }
+
+        /* Accordion-style List */
+        .accordion-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .accordion-list li {
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+        .accordion-list .accordion-title {
+            background-color: #607d8b;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-list .accordion-title:hover {
+            background-color: #455a64;
+        }
+        .accordion-list .accordion-content {
+            display: none;
+            padding: 10px;
+            background-color: #eceff1;
+        }
+        .accordion-list .accordion-title.active + .accordion-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>Basic List Styling</h2>
+        <ul class="basic-list">
+            <li>Basic Item 1</li>
+            <li>Basic Item 2</li>
+            <li>Basic Item 3</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Custom Bullet List</h2>
+        <ul class="custom-bullet-list">
+            <li>Custom Bullet Item 1</li>
+            <li>Custom Bullet Item 2</li>
+            <li>Custom Bullet Item 3</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Numbered List with Background</h2>
+        <ol class="numbered-list">
+            <li>Numbered Item 1</li>
+            <li>Numbered Item 2</li>
+            <li>Numbered Item 3</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Horizontal List</h2>
+        <ul class="horizontal-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>List with Icons</h2>
+        <ul class="icon-list">
+            <li><i class="fas fa-check-circle"></i>Icon Item 1</li>
+            <li><i class="fas fa-check-circle"></i>Icon Item 2</li>
+            <li><i class="fas fa-check-circle"></i>Icon Item 3</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Accordion-style List</h2>
+        <ul class="accordion-list">
+            <li>
+                <div class="accordion-title">Accordion Item 1</div>
+                <div class="accordion-content">
+                    This is the content for Accordion Item 1.
+                </div>
+            </li>
+            <li>
+                <div class="accordion-title">Accordion Item 2</div>
+                <div class="accordion-content">
+                    This is the content for Accordion Item 2.
+                </div>
+            </li>
+            <li>
+                <div class="accordion-title">Accordion Item 3</div>
+                <div class="accordion-content">
+                    This is the content for Accordion Item 3.
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript for Accordion functionality
+        const accordionTitles = document.querySelectorAll('.accordion-title');
+        
+        accordionTitles.forEach(title => {
+            title.addEventListener('click', () => {
+                const content = title.nextElementSibling;
+                title.classList.toggle('active');
+                
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

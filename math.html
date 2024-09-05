@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Math Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Example using calc() */
+        .calc-example {
+            width: calc(100% - 40px); /* 100% width minus 40px padding */
+            height: 150px;
+            background-color: #4CAF50;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Example using min() */
+        .min-example {
+            width: min(100%, 600px); /* Width will be 100% until it reaches 600px */
+            height: 150px;
+            background-color: #2196F3;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Example using max() */
+        .max-example {
+            width: max(50%, 400px); /* Width will be 50% until it reaches 400px */
+            height: 150px;
+            background-color: #ff5722;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Example using clamp() */
+        .clamp-example {
+            width: clamp(200px, 50%, 600px); /* Width will be between 200px and 600px, based on 50% of the container */
+            height: 150px;
+            background-color: #009688;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Math Functions Examples</h1>
+
+    <!-- Example using calc() -->
+    <section>
+        <h2>Using calc()</h2>
+        <div class="calc-example">
+            Width is 100% minus 40px padding
+        </div>
+    </section>
+
+    <!-- Example using min() -->
+    <section>
+        <h2>Using min()</h2>
+        <div class="min-example">
+            Width is the smaller of 100% or 600px
+        </div>
+    </section>
+
+    <!-- Example using max() -->
+    <section>
+        <h2>Using max()</h2>
+        <div class="max-example">
+            Width is the larger of 50% or 400px
+        </div>
+    </section>
+
+    <!-- Example using clamp() -->
+    <section>
+        <h2>Using clamp()</h2>
+        <div class="clamp-example">
+            Width is between 200px and 600px, based on 50% of the container
+        </div>
+    </section>
+
+</body>
+</html>

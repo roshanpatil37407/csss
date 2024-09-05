@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Example</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden; /* Clearfix to contain floated elements */
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .float-left {
+            float: left;
+            width: 30%;
+            margin-right: 20px;
+            background-color: #d0e0f0;
+            padding: 10px;
+        }
+
+        .float-right {
+            float: right;
+            width: 30%;
+            margin-left: 20px;
+            background-color: #f0d0e0;
+            padding: 10px;
+        }
+
+        .content {
+            background-color: #e0f0d0;
+            padding: 10px;
+            overflow: hidden; /* Clearfix to contain floated elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="float-left">
+            <h2>Left Float</h2>
+            <p>This element is floated to the left. The text wraps around this box.</p>
+        </div>
+        <div class="float-right">
+            <h2>Right Float</h2>
+            <p>This element is floated to the right. The text wraps around this box as well.</p>
+        </div>
+        <div class="content">
+            <h2>Content Area</h2>
+            <p>This is the content area. Notice how the text wraps around the floated elements on the left and right.</p>
+        </div>
+    </div>
+</body>
+</html>

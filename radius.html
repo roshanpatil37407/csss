@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Border-Radius Example</title>
+    <style>
+        .animated-shape {
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+            transition: border-radius 1s ease-in-out, background 1s ease-in-out;
+        }
+
+        .shape1 {
+            border-radius: 50px / 15px;
+        }
+
+        .shape2 {
+            border-radius: 15px / 50px;
+        }
+
+        .shape3 {
+            border-radius: 50%;
+        }
+
+        .animated-shape:hover {
+            border-radius: 10% 40% 30% 20%;
+            background: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Animated Border-Radius Example</h1>
+
+<div class="animated-shape shape1"></div>
+<div class="animated-shape shape2"></div>
+<div class="animated-shape shape3"></div>
+
+</body>
+</html>

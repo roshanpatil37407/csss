@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Box Shadows</title>
+    <style>
+        /* Text Shadows */
+        .text-shadow {
+            font-size: 2em;
+            color: #333;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.4); /* Black shadow */
+            margin-bottom: 20px;
+        }
+
+        .text-shadow-blue {
+            font-size: 2em;
+            color: #333;
+            text-shadow: 3px 3px 5px rgba(0,0,255,0.5); /* Blue shadow */
+            margin-bottom: 20px;
+        }
+
+        .text-shadow-red {
+            font-size: 2em;
+            color: #333;
+            text-shadow: 3px 3px 5px rgba(255,0,0,0.5); /* Red shadow */
+            margin-bottom: 20px;
+        }
+
+        .text-shadow-green {
+            font-size: 2em;
+            color: #333;
+            text-shadow: 3px 3px 5px rgba(0,255,0,0.5); /* Green shadow */
+            margin-bottom: 20px;
+        }
+
+        .text-shadow-multiple {
+            font-size: 2em;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 
+                         -2px -2px 4px rgba(255,255,0,0.5); /* Black and Yellow shadow */
+            margin-bottom: 20px;
+        }
+
+        /* Box Shadows */
+        .box-shadow {
+            width: 200px;
+            height: 200px;
+            background-color: #f5f5f5;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3); /* Black shadow */
+            margin-bottom: 20px;
+        }
+
+        .box-shadow-blue {
+            width: 200px;
+            height: 200px;
+            background-color: #f5f5f5;
+            box-shadow: 5px 5px 10px rgba(0,0,255,0.3); /* Blue shadow */
+            margin-bottom: 20px;
+        }
+
+        .box-shadow-red {
+            width: 200px;
+            height: 200px;
+            background-color: #f5f5f5;
+            box-shadow: 5px 5px 10px rgba(255,0,0,0.3); /* Red shadow */
+            margin-bottom: 20px;
+        }
+
+        .box-shadow-green {
+            width: 200px;
+            height: 200px;
+            background-color: #f5f5f5;
+            box-shadow: 5px 5px 10px rgba(0,255,0,0.3); /* Green shadow */
+            margin-bottom: 20px;
+        }
+
+        .box-shadow-multiple {
+            width: 200px;
+            height: 200px;
+            background-color: #d0d0d0;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.5), 
+                        -4px -4px 8px rgba(255,255,0,0.3); /* Black and Yellow shadow */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-shadow">Text with Black Shadow</div>
+    <div class="text-shadow-blue">Text with Blue Shadow</div>
+    <div class="text-shadow-red">Text with Red Shadow</div>
+    <div class="text-shadow-green">Text with Green Shadow</div>
+    <div class="text-shadow-multiple">Text with Multiple Shadows</div>
+
+    <div class="box-shadow">Box with Black Shadow</div>
+    <div class="box-shadow-blue">Box with Blue Shadow</div>
+    <div class="box-shadow-red">Box with Red Shadow</div>
+    <div class="box-shadow-green">Box with Green Shadow</div>
+    <div class="box-shadow-multiple">Box with Multiple Shadows</div>
+</body>
+</html>

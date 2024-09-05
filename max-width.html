@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max-Width Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Max-Width in CSS</h1>
+            <p>
+                This container has a maximum width of 600px. No matter how wide the browser window is, 
+                this container will not exceed 600px in width. This is useful for creating responsive designs 
+                where you want the content to be centered and not spread out too much on larger screens.
+            </p>
+            <p>
+                Resize the browser window to see how the container width behaves. On smaller screens, 
+                the container will adjust to fit the screen size, but it won't go beyond 600px on larger screens.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

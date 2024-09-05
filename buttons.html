@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Button Styles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Basic Button Style */
+        .basic-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .basic-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Outline Button */
+        .outline-button {
+            background-color: transparent;
+            color: #3498db;
+            border: 2px solid #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+        }
+
+        .outline-button:hover {
+            color: white;
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+
+        /* Gradient Button */
+        .gradient-button {
+            background: linear-gradient(45deg, #ff6f61, #d500f9);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .gradient-button:hover {
+            background: linear-gradient(45deg, #d500f9, #ff6f61);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Floating Button */
+        .floating-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-size: 24px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .floating-button:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transform: scale(1.1);
+        }
+
+        /* 3D Button */
+        .three-d-button {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+        }
+
+        .three-d-button:active {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: translateY(4px);
+        }
+
+        /* Icon Button */
+        .icon-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .icon-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Animated Button */
+        .animated-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            font-size: 16px;
+            transition: color 0.4s, transform 0.4s;
+        }
+
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s, height 0.4s;
+            z-index: 0;
+        }
+
+        .animated-button:hover::before {
+            width: 0;
+            height: 0;
+        }
+
+        .animated-button:hover {
+            color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .animated-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Background and Shadow Button */
+        .bg-shadow-button {
+            background: #3498db;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .bg-shadow-button:hover {
+            background: #2980b9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px);
+        }
+
+        /* Glassmorphism Button */
+        .glass-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: #333;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .glass-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+
+        /* Pulse Effect Button */
+        .pulse-button {
+            background: #e91e63;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .pulse-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        .pulse-button:hover::before {
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+
+        .pulse-button:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Rotating Button */
+        .rotating-button {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .rotating-button:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>All Button Styles</h1>
+    <div class="button-container">
+        <button class="basic-button">Basic Button</button>
+        <button class="outline-button">Outline Button</button>
+        <button class="gradient-button">Gradient Button</button>
+        <button class="floating-button">+</button>
+        <button class="three-d-button">3D Button</button>
+        <button class="icon-button">
+            <i class="fas fa-thumbs-up"></i>
+        </button>
+        <button class="animated-button">
+            <span>Animated Button</span>
+        </button>
+        <button class="bg-shadow-button">Background & Shadow</button>
+        <button class="glass-button">Glassmorphism</button>
+        <button class="pulse-button">Pulse Effect</button>
+        <button class="rotating-button">Rotating</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout Examples</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Flexbox Layout Styles */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin-bottom: 40px; /* Space between different layout examples */
+        }
+
+        .flex-container .header,
+        .flex-container .footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .flex-container .content {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        /* Grid Layout Styles */
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr;
+            height: 100vh;
+            margin-bottom: 40px; /* Space between different layout examples */
+        }
+
+        .grid-container .header,
+        .grid-container .footer {
+            background-color: #2196F3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .grid-container .sidebar {
+            grid-area: sidebar;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        .grid-container .main {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+        /* Two-Column Layout Styles */
+        .two-column-container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "left right"
+                "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 2fr;
+            height: 100vh;
+        }
+
+        .two-column-container .header,
+        .two-column-container .footer {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .two-column-container .left {
+            grid-area: left;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        .two-column-container .right {
+            grid-area: right;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+        /* Section Header Styling */
+        h2 {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Basic Flexbox Layout -->
+    <section class="flex-container">
+        <h2>Basic Flexbox Layout</h2>
+        <div class="header">Header</div>
+        <div class="content">Content Area</div>
+        <div class="footer">Footer</div>
+    </section>
+
+    <!-- CSS Grid Layout -->
+    <section class="grid-container">
+        <h2>CSS Grid Layout</h2>
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main Content Area</div>
+        <div class="footer">Footer</div>
+    </section>
+
+    <!-- Two-Column Layout -->
+    <section class="two-column-container">
+        <h2>Two-Column Layout</h2>
+        <div class="header">Header</div>
+        <div class="left">Left Column</div>
+        <div class="right">Right Column</div>
+        <div class="footer">Footer</div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Navigation Bars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Common Styles for Navigation Bars */
+        .navbar {
+            width: 100%;
+        
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .search-bar {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            outline: none;
+            color: white;
+            background: transparent;
+        }
+
+        .search-bar button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            color: #f39c12;
+        }
+
+        .sign-in-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .sign-in-button:hover {
+            background: #2980b9;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar-style1 {
+            background-color: #2c3e50;
+        }
+
+        .navbar-style2 {
+            background-image: url('https://source.unsplash.com/random/1600x900');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar-style3 {
+            background: #e74c3c;
+            position: relative;
+        }
+
+        .navbar-style3 .navbar-menu {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .navbar-style4 {
+            background: #3498db;
+            position: fixed;
+            top: 60px;
+            box-shadow: none;
+        }
+
+        .navbar-style4 .search-bar {
+            display: none;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                background: #3498db;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            .search-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar 1 -->
+    <div class="navbar navbar-style1">
+        <div class="logo">Logo1</div>
+        <div class="navbar-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <div class="dropdown">
+                <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="#">Web Design</a>
+                    <a href="#">SEO</a>
+                    <a href="#">Marketing</a>
+                </div>
+            </div>
+            <a href="#">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="sign-in-button">Sign In</button>
+    </div>
+
+    <!-- Navigation Bar 2 -->
+    <div class="navbar navbar-style2">
+        <div class="logo">Logo2</div>
+        <button class="menu-toggle" onclick="toggleMenu('menu2')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="navbar-menu" id="menu2">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="sign-in-button">Sign In</button>
+    </div>
+
+    <!-- Navigation Bar 3 -->
+    <div class="navbar navbar-style3">
+        <div class="logo">Logo3</div>
+        <div class="navbar-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="sign-in-button">Sign In</button>
+    </div>
+
+</body>
+</html>

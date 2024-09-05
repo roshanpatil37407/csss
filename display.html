@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .box {
+            padding: 20px;
+            background-color: #009688;
+            color: white;
+            margin: 10px;
+            text-align: center;
+        }
+        .inline {
+            display: inline;
+        }
+        .block {
+            display: block;
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .none {
+            display: none;
+        }
+        .inline-block {
+            display: inline-block;
+        }
+        .relative {
+            display: inline-block;
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>Display: inline</h2>
+        <p>Elements with <code>display: inline;</code> do not start on a new line and only take up as much width as necessary.</p>
+        <div class="box inline">Inline Box 1</div>
+        <div class="box inline">Inline Box 2</div>
+    </div>
+
+    <div class="section">
+        <h2>Display: block</h2>
+        <p>Elements with <code>display: block;</code> start on a new line and take up the full width available.</p>
+        <div class="box block">Block Box 1</div>
+        <div class="box block">Block Box 2</div>
+    </div>
+
+    <div class="section">
+        <h2>Display: flex</h2>
+        <p>Elements with <code>display: flex;</code> allow flexible box layouts. Items can be aligned and distributed within the container.</p>
+        <div class="flex">
+            <div class="box">Flex Item 1</div>
+            <div class="box">Flex Item 2</div>
+            <div class="box">Flex Item 3</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: grid</h2>
+        <p>Elements with <code>display: grid;</code> create a grid layout with defined rows and columns.</p>
+        <div class="grid">
+            <div class="box">Grid Item 1</div>
+            <div class="box">Grid Item 2</div>
+            <div class="box">Grid Item 3</div>
+            <div class="box">Grid Item 4</div>
+            <div class="box">Grid Item 5</div>
+            <div class="box">Grid Item 6</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: none</h2>
+        <p>Elements with <code>display: none;</code> are completely removed from the document flow and are not visible.</p>
+        <div class="box none">This box is hidden</div>
+    </div>
+
+    <div class="section">
+        <h2>Display: inline-block</h2>
+        <p>Elements with <code>display: inline-block;</code> are like inline elements but allow setting width and height.</p>
+        <div class="box inline-block">Inline-Block Box 1</div>
+        <div class="box inline-block">Inline-Block Box 2</div>
+    </div>
+
+    <div class="section">
+        <h2>Position with Display</h2>
+        <p>Elements can have different display properties while using position properties like <code>relative</code> and <code>absolute</code>.</p>
+        <div class="relative">
+            <div class="box absolute">Absolutely Positioned Box</div>
+            <div class="box">Relative Container</div>
+        </div>
+    </div>
+</body>
+</html>

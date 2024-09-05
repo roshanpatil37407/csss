@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* Basic Reset */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Container */
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu main main"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr; /* Menu and main content */
+            grid-template-rows: auto 1fr auto; /* Header, content, footer */
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Menu */
+        .menu {
+            grid-area: menu;
+            background-color: #555;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        .main {
+            grid-area: main;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "menu"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive Menu Button */
+        .menu-button {
+            display: none;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-button {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu.open {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Responsive Website</h1>
+        </div>
+
+        <button class="menu-button">Menu</button>
+        <div class="menu">
+            <p>Home</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="main">
+            <h2>Main Content</h2>
+            <p>This is a simple responsive layout example. Resize the window to see how it adjusts.</p>
+            <button id="alertButton">Click Me</button>
+        </div>
+
+        <div class="footer">
+            <p>Footer Content &copy; 2024</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('open');
+        });
+
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+
+</body>
+</html>

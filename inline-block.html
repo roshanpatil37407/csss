@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-Block Example</title>
+    <style>
+        .container {
+            text-align: center; /* Center the inline-block elements horizontally */
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Hover effect */
+        .box:hover {
+            background-color: #45a049;
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline-Block Example</h1>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</body>
+</html>

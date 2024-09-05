@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Alignment Examples</title>
+    <style>
+        /* Text Alignment */
+        .text-container {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        .text-left {
+            text-align: left;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+
+        .text-right {
+            text-align: right;
+            background-color: #d0d0d0;
+            padding: 10px;
+        }
+
+        /* Block Element Horizontal Alignment */
+        .block-container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #e0f7fa;
+        }
+
+        /* Vertical Alignment */
+        .vertical-container {
+            height: 200px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff3e0;
+        }
+
+        .inline-item {
+            display: inline-block;
+            vertical-align: middle;
+            height: 50px;
+            line-height: 50px;
+            background-color: #ffecb3;
+        }
+
+        /* Flexbox Alignment */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            border: 1px solid #ccc;
+            background-color: #e8f5e9;
+            padding: 0 10px;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 50px;
+            background-color: #c8e6c9;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /* Grid Alignment */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            justify-items: center;
+            align-items: center;
+            height: 200px;
+            border: 1px solid #ccc;
+            background-color: #fce4ec;
+            padding: 10px;
+        }
+
+        .grid-item {
+            width: 100px;
+            height: 100px;
+            background-color: #f48fb1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Alignment Examples</h1>
+
+    <section class="text-container">
+        <div class="text-center">Centered Text</div>
+        <div class="text-left">Left Aligned Text</div>
+        <div class="text-right">Right Aligned Text</div>
+    </section>
+
+    <section class="block-container">
+        This block element is centered horizontally.
+    </section>
+
+    <section class="vertical-container">
+        <div class="inline-item">Vertically Centered</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </section>
+
+    <section class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+    </section>
+</body>
+</html>

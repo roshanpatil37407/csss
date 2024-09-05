@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Examples</title>
+    <style>
+        /* Basic styles for the dropdown containers */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        /* Style for the dropdown button */
+        .dropdown button {
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Style for the dropdown content */
+        .dropdown-content {
+            display: none; /* Hide by default */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style for each item in the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change background color of items on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hover Effect */
+        .dropdown-basic button {
+            background-color: #4CAF50; /* Green background */
+            color: white;
+        }
+
+        .dropdown-basic:hover button {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Animated Dropdown */
+        .dropdown-animated button {
+            background-color: #2196F3; /* Blue background */
+            color: white;
+        }
+
+        .dropdown-animated:hover button {
+            background-color: #0b7dda; /* Darker blue on hover */
+        }
+
+        .dropdown-animated .dropdown-content {
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .dropdown-animated:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Dropdown with Submenu */
+        .dropdown-submenu .submenu {
+            display: none; /* Hide by default */
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            min-width: 160px;
+        }
+
+        .dropdown-submenu:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Menu Examples</h1>
+
+    <!-- Basic Dropdown Menu -->
+    <section>
+        <h2>Basic Dropdown Menu</h2>
+        <div class="dropdown dropdown-basic">
+            <button>Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Dropdown Menu -->
+    <section>
+        <h2>Animated Dropdown Menu</h2>
+        <div class="dropdown dropdown-animated">
+            <button>Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dropdown Menu with Submenu -->
+    <section>
+        <h2>Dropdown Menu with Submenu</h2>
+        <div class="dropdown dropdown-submenu">
+            <button>Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2
+                    <div class="submenu">
+                        <a href="#">Submenu 1</a>
+                        <a href="#">Submenu 2</a>
+                    </div>
+                </a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

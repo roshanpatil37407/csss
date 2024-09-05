@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Outline Property Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .example {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .example h2 {
+            margin-top: 0;
+        }
+        .box {
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        .outline-width {
+            outline-width: 4px;
+            outline-style: solid;
+            outline-color: #ff5722;
+        }
+        .outline-style {
+            outline-width: 3px;
+            outline-style: dashed;
+            outline-color: #4CAF50;
+        }
+        .outline-color {
+            outline-width: 5px;
+            outline-style: dotted;
+            outline-color: #2196F3;
+        }
+        .outline-complete {
+            outline: 3px double #FFC107;
+        }
+        .outline-none {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="example">
+        <h2>Outline Width</h2>
+        <div class="box outline-width">Outline Width Example</div>
+    </div>
+
+    <div class="example">
+        <h2>Outline Style</h2>
+        <div class="box outline-style">Outline Style Example</div>
+    </div>
+
+    <div class="example">
+        <h2>Outline Color</h2>
+        <div class="box outline-color">Outline Color Example</div>
+    </div>
+
+    <div class="example">
+        <h2>Complete Outline Shorthand</h2>
+        <div class="box outline-complete">Complete Outline Example</div>
+    </div>
+
+    <div class="example">
+        <h2>No Outline</h2>
+        <div class="box outline-none">No Outline Example</div>
+    </div>
+</body>
+</html>

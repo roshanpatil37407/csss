@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes and Pseudo-Elements</title>
+    <style>
+        /* Pseudo-Classes */
+
+        /* Hover Effect */
+        .button {
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Focus Effect */
+        .input-field {
+            padding: 10px;
+            border: 2px solid #ccc;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            margin: 20px;
+        }
+
+        .input-field:focus {
+            border-color: #4CAF50; /* Green border on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        /* nth-child Example */
+        .list-item:nth-child(even) {
+            background-color: #f2f2f2; /* Light grey background for even items */
+        }
+
+        .list-item:nth-child(odd) {
+            background-color: #ffffff; /* White background for odd items */
+        }
+
+        /* Pseudo-Elements */
+
+        /* Before Example */
+        .notification::before {
+            content: "🔔 "; /* Add a bell emoji before the content */
+            font-size: 20px;
+        }
+
+        /* After Example */
+        .quote::after {
+            content: " – Author"; /* Add text after the content */
+            font-style: italic;
+            color: #555;
+        }
+
+        /* First-Line Example */
+        .intro::first-line {
+            font-weight: bold;
+            color: #007bff; /* Blue color */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Pseudo-Classes and Pseudo-Elements</h1>
+
+    <section>
+        <h2>Hover Effect with Pseudo-Class</h2>
+        <button class="button">Hover over me</button>
+    </section>
+
+    <section>
+        <h2>Focus Effect with Pseudo-Class</h2>
+        <input type="text" class="input-field" placeholder="Focus on me">
+    </section>
+
+    <section>
+        <h2>nth-child Pseudo-Class</h2>
+        <ul>
+            <li class="list-item">Item 1</li>
+            <li class="list-item">Item 2</li>
+            <li class="list-item">Item 3</li>
+            <li class="list-item">Item 4</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Before Pseudo-Element</h2>
+        <div class="notification">New message received</div>
+    </section>
+
+    <section>
+        <h2>After Pseudo-Element</h2>
+        <div class="quote">The only limit to our realization of tomorrow is our doubts of today.</div>
+    </section>
+
+    <section>
+        <h2>First-Line Pseudo-Element</h2>
+        <p class="intro">This is the first line of the paragraph. It will be styled differently from the rest of the text.</p>
+    </section>
+</body>
+</html>
